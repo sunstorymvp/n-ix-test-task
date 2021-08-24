@@ -1,0 +1,163 @@
+{
+  "env": {
+    "es2021": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:compat/recommended",
+    "plugin:jest/recommended",
+    "plugin:import/errors",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["node_modules", "src"]
+      }
+    }
+  },
+  "rules": {
+    "operator-linebreak": ["error", "after"],
+    "space-before-blocks": "error",
+    "keyword-spacing": "error",
+    "no-unsafe-optional-chaining": "error",
+    "no-confusing-arrow": ["error", { "allowParens": true }],
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "no-debugger": "error",
+    "no-undef": "off",
+    "no-else-return": "off",
+    "no-implicit-coercion": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+    "no-nested-ternary": "off",
+    "no-negated-condition": "error",
+    "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
+    "no-restricted-syntax": ["error", {
+      "selector": "ExportAllDeclaration:not([exported])",
+      "message": "Wildcard (*) export is not allowed, use namespace export instead"
+    }],
+    "no-unused-expressions": ["error", {
+      "allowShortCircuit": true,
+      "allowTernary": true
+    }],
+    "max-len": ["error", {
+      "code": 120,
+      "tabWidth": 2,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreRegExpLiterals": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "curly": ["error", "all"],
+    "arrow-parens": ["error", "always"],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "semi": "error",
+    "eol-last": ["error", "always"],
+    "quotes": ["error", "single"],
+    "quote-props": ["error", "consistent-as-needed"],
+    "require-atomic-updates": "error",
+    "jsx-quotes": ["error", "prefer-double"],
+    "object-curly-spacing": ["error", "always"],
+    "object-curly-newline": ["error", { "consistent": true }],
+    "padding-line-between-statements": ["error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
+    ],
+    "array-bracket-spacing": ["error", "never"],
+    "array-bracket-newline": ["error", "consistent"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "id-length": ["error", {
+      "min": 2,
+      "properties": "never"
+    }],
+
+    "import/no-anonymous-default-export": "error",
+    "import/first": "error",
+    "import/no-cycle": "error",
+    "import/no-useless-path-segments": "error",
+    "import/order": ["error", {
+      "groups": [
+        ["builtin", "external"],
+        ["internal"],
+        ["parent", "sibling", "index"]
+      ],
+      "newlines-between": "always"
+    }],
+    "import/prefer-default-export": "off",
+    "import/named": "error",
+
+    "@next/next/no-css-tags": "off",
+    "@next/next/no-unwanted-polyfillio": "error",
+    "@next/next/no-page-custom-font": "error",
+    "@next/next/no-title-in-document-head": "error",
+    "@next/next/google-font-display": "error",
+    "@next/next/google-font-preconnect": "error",
+    "@next/next/link-passhref": "error",
+    "@next/next/no-document-import-in-page": "off",
+
+    "react/prop-types": "off",
+    "react/no-unsafe": "error",
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".tsx"] }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line"
+    }],
+    "react/jsx-closing-bracket-location": ["error", {
+      "selfClosing": "after-props",
+      "nonEmpty": "after-props"
+    }],
+    "react/no-danger": "off",
+    "react/require-default-props": ["error", { "forbidDefaultForRequired": true }],
+    "react/no-did-mount-set-state": "off",
+    "react/no-did-update-set-state": "off",
+    "react/no-unused-prop-types": "error",
+    "react/no-string-refs": "error",
+    "react/no-children-prop": "error",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-adjacent-inline-elements": "error",
+    "react/destructuring-assignment": "off",
+    "react/button-has-type": "error",
+    "react/sort-prop-types": ["error", {
+      "sortShapeProp": true,
+      "requiredFirst": true,
+      "noSortAlphabetically": true
+    }],
+    "react/sort-comp": "off",
+    "react/forbid-prop-types": ["error", { "forbid": ["any", "array"] }],
+    "react/jsx-fragments": ["error", "element"],
+    "react/state-in-constructor": ["error", "never"],
+    "react/static-property-placement": ["error", "static public field"],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-sort-props": ["error", {
+      "shorthandLast": true,
+      "noSortAlphabetically": true,
+      "reservedFirst": ["key", "ref"]
+    }],
+
+    "react-hooks/exhaustive-deps": "off",
+
+    "jsx-a11y/alt-text": [
+      "error",
+      {
+        "elements": ["img"],
+        "img": ["Image"]
+      }
+    ],
+
+    "jest/expect-expect": "error",
+    "jest/prefer-strict-equal": "error",
+    "jest/prefer-to-be-null": "error",
+    "jest/prefer-to-be-undefined": "error",
+    "jest/no-commented-out-tests": "error",
+    "jest/consistent-test-it": ["error", { "fn": "test", "withinDescribe": "test" }]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "n-ix-test-task",
+  "version": "0.1.0",
+  "private": true,
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "engines": {
+    "node": ">=16.5.0"
+  },
+  "scripts": {
+    "start-dev": "next dev",
+    "start-prod": "npm run build && next start",
+    "build": "next build",
+    "test": "concurrently \"npm run test:lint\" \"npm run test:unit\"",
+    "test:lint": "concurrently \"npm run test:lint:eslint\" \"npm run test:lint:stylelint\"",
+    "test:lint:eslint": "eslint src --cache --report-unused-disable-directives",
+    "test:lint:stylelint": "stylelint **/src/**/*.css --cache",
+    "test:unit": "jest"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "next": "^11.1.0",
+    "ramda": "^0.27.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@arkweid/lefthook": "^0.7.6",
+    "@types/jest": "^27.0.1",
+    "@types/ramda": "^0.27.44",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "babel-jest": "^27.0.6",
+    "concurrently": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-plugin-compat": "^3.11.1",
+    "eslint-plugin-jest": "^24.4.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "postcss-preset-env": "^6.7.0",
+    "prop-types": "^15.7.2",
+    "react-test-renderer": "^17.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.1",
+    "ts-jest": "^27.0.5"
+  }
+}

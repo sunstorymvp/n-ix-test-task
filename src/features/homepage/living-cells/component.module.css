@@ -1,0 +1,19 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(var(--row-length), 1fr);
+  margin-top: 20px;
+  border: 1px solid var(--alive-cell-color);
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+}
+
+.cell__alive {
+  background-color: var(--alive-cell-color);
+}
+
+.cell__dead {
+  background-color: var(--dead-cell-color);
+}

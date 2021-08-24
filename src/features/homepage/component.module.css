@@ -1,0 +1,7 @@
+.root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px auto;
+  width: 80%;
+}

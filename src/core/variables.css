@@ -1,0 +1,12 @@
+:root {
+  /* stylelint-disable declaration-colon-space-after */
+  --color-dark-gray:                  rgb(28 28 28);
+  --color-light-gray:                 rgb(234 234 234);
+
+  /* app colors */
+  --alive-cell-color:                 var(--color-dark-gray);
+  --dead-cell-color:                  var(--color-light-gray);
+  /* stylelint-enable declaration-colon-space-after */
+
+  --font-roboto: roboto, sans-serif;
+}

@@ -1,0 +1,10 @@
+colors: false
+skip_output:
+  - meta
+  - success
+  - summary
+
+pre-push:
+  commands:
+    test:
+      run: npm run test

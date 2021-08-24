@@ -1,0 +1,14 @@
+/* only global styles not specific to any component should go here */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-roboto);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
