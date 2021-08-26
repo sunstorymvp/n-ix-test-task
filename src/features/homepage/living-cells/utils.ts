@@ -1,4 +1,4 @@
-export const getNeighboursAliveCount = (neighbours: Array<0 | 1>, isAlive: number) => (
+export const getNeighboursAliveCount = (neighbours: Array<0 | 1>, isAlive: 0 | 1) => (
   neighbours.reduce((result, neighbour) => result + neighbour, 0) - isAlive
 );
 
