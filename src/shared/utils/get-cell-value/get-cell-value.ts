@@ -2,7 +2,7 @@ const isCellOut = (array: Array<0 | 1>, rowLength: number, cellIndex: number, ro
   const isLeftOut = cellIndex === rowStartIndex - 1;
   const isRightOut = cellIndex === rowStartIndex + rowLength;
   const isBeforeStart = cellIndex < 0;
-  const isAfterEnd = cellIndex >= array.length - 1;
+  const isAfterEnd = cellIndex >= array.length;
 
   return isRightOut || isLeftOut || isBeforeStart || isAfterEnd;
 };

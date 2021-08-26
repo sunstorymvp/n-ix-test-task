@@ -6,7 +6,7 @@ import { getNeighboursAliveCount, getNextCellState } from './utils';
 import * as constants from './constants';
 
 const useNextArrayTick = (initialArray: Array<0 | 1>, tick: number) => {
-  const [array, setArray] = useState(initialArray);
+  const [array, setArray] = useState<Array<0 | 1>>(initialArray);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
